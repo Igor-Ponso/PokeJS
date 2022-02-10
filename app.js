@@ -1,3 +1,4 @@
+//!Must to use Template String to work.
 const getPokeId = (pokeId) => `https://pokeapi.co/api/v2/pokemon/${pokeId}`;
 const generatePokemonPromises = () =>
   Array(151)
@@ -25,6 +26,5 @@ const insertPokemons = (pokemons) => {
   ul.innerHTML = pokemons;
 };
 
-//!Must to use Template String to work.
 const pokemonPromises = generatePokemonPromises();
 Promise.all(pokemonPromises).then(generateHtml).then(insertPokemons);
